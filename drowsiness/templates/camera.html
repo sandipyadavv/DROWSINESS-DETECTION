@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p class="eyebrow">Live monitoring</p>
+<h1>Stay alert</h1>
+<p id="status" class="lead">Starting camera…</p>
+<div class="video-wrap" id="wrap">
+  <video id="video" playsinline muted></video>
+  <canvas id="canvas"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+<script src="{% static 'js/detect.js' %}"></script>
+{% endblock %}
